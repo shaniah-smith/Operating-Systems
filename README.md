@@ -33,3 +33,6 @@ This project demonstrates basic Unix process creation and management using `fork
 
 ```bash
 make
+make prog1   # builds main.c into prog1
+make prog2   # builds main2.c into prog2
+make my3proc # builds main3.c into my3proc
