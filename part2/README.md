@@ -47,3 +47,4 @@ make        # build all programs
 ./signal1
 ./signal2
 ./timer
+Stop with Ctrl-C
