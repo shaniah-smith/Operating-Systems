@@ -179,7 +179,56 @@ cat < testData
 
 ---
 
-## **6. Conclusion**
+## **6. How to Compile and Run**
+
+### **Compilation**
+
+Using the provided Makefile:
+
+```bash
+make
+```
+
+This compiles `shell.c` into an executable named `ref_shell` (or `shell2` if modified in the Makefile).
+
+To clean up compiled binaries:
+
+```bash
+make clean
+```
+
+### **Execution**
+
+Run the shell using:
+
+```bash
+./ref_shell
+```
+
+You should see the prompt displaying the current working directory, for example:
+
+```
+/home/codio/workspace>
+```
+
+### **Example Commands to Test**
+
+```
+pwd
+cd testDir1
+echo hello $HOME
+setenv greeting hi
+env greeting
+ls > output.txt
+cat output.txt
+sleep 20 &
+sleep 100  # Then press Ctrl-C to test signal handling
+exit
+```
+
+---
+
+## **7. Conclusion**
 
 This project deepened my understanding of Linux process control, signal management, and input/output redirection. By implementing a fully functional mini-shell, I practiced critical systems programming concepts such as forking, execing, and managing concurrent processes.
 
