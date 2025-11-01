@@ -1,0 +1,22 @@
+#ifndef PROCESS_H
+#define PROCESS_H
+
+/* Core process record for all schedulers.
+   The lab assumes art = 0, but we keep it for extensibility. */
+typedef struct Process {
+    int pid;  /* Process ID */
+    int bt;   /* Burst Time */
+    int art;  /* Arrival Time */
+    int wt;   /* Waiting Time */
+    int tat;  /* Turnaround Time */
+    int pri;  /* Priority (lower value = higher priority) */
+} ProcessType;
+
+/* ---- Prototypes implemented in schedsim.c ---- */
+void compute_tat(ProcessType *plist, int n);
+void findWaitingTimeFCFS(ProcessType *plist, int n);
+void schedulePriority(ProcessType *plist, int n);
+void findWaitingTimeSJF(ProcessType *plist, int n);
+void scheduleRR(ProcessType *plist, int n, int quantum);
+
+#endif /* PROCESS_H */
